@@ -8,6 +8,159 @@
 <body>
     <h>assalam alaykom</h>
     <h>i love you so much</h>
+    <p>
+        User001@LAPTOP-HUVE3SVK MINGW64 /
+        $ git branch
+        fatal: not a git repository (or any of the parent directories): .git
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /
+        $ cd myrepository
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (car)
+        $ git checkout master
+        A       code.js
+        A       style.css
+        Switched to branch 'master'
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git log
+        commit 220ebbe8270fbbfe2414fa785614e6c28ecaa078 (HEAD -> master, copy)
+        Author: delapart <delapart72@hotmail.com>
+        Date:   Tue Dec 3 14:04:12 2024 -0800
+        
+            background of body change to yellow in cop branch
+        
+        commit e6db2e6d969b7f231ab093c34c9c51b73507b3f6 (car)
+        Author: delapart <delapart72@hotmail.com>
+        Date:   Tue Dec 3 14:00:22 2024 -0800
+        
+             a line add to index.html
+        
+        commit d5abc2123379fab836ad313a565c4bcdcb3f3cb3
+        Author: delapart <delapart72@hotmail.com>
+        Date:   Tue Dec 3 13:52:48 2024 -0800
+        
+            a new file named index.html has been created in myrepository.
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ ls
+        code.js  index.html  style.css
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git remote -v
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git remote add delapart https://github.com/delapart72/myrepository.git
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git remote -v
+        delapart        https://github.com/delapart72/myrepository.git (fetch)
+        delapart        https://github.com/delapart72/myrepository.git (push)
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git push -u delapart myrepository
+        error: src refspec myrepository does not match any
+        error: failed to push some refs to 'https://github.com/delapart72/myrepository.git'
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git push -u delapart master
+        info: please complete authentication in your browser...
+        Enumerating objects: 9, done.
+        Counting objects: 100% (9/9), done.
+        Delta compression using up to 2 threads
+        Compressing objects: 100% (5/5), done.
+        Writing objects: 100% (9/9), 890 bytes | 127.00 KiB/s, done.
+        Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+        remote: Resolving deltas: 100% (1/1), done.
+        remote:
+        remote: Create a pull request for 'master' on GitHub by visiting:
+        remote:      https://github.com/delapart72/myrepository/pull/new/master
+        remote:
+        To https://github.com/delapart72/myrepository.git
+         * [new branch]      master -> master
+        branch 'master' set up to track 'delapart/master'.
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ gi
+        bash: gi: command not found
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ ls
+        code.js  index.html  style.css
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git branch
+          car
+          copy
+        * master
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git merge copy
+        Already up to date.
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git log
+        commit 220ebbe8270fbbfe2414fa785614e6c28ecaa078 (HEAD -> master, delapart/master, copy)
+        Author: delapart <delapart72@hotmail.com>
+        Date:   Tue Dec 3 14:04:12 2024 -0800
+        
+            background of body change to yellow in cop branch
+        
+        commit e6db2e6d969b7f231ab093c34c9c51b73507b3f6 (car)
+        Author: delapart <delapart72@hotmail.com>
+        Date:   Tue Dec 3 14:00:22 2024 -0800
+        
+             a line add to index.html
+        
+        commit d5abc2123379fab836ad313a565c4bcdcb3f3cb3
+        Author: delapart <delapart72@hotmail.com>
+        Date:   Tue Dec 3 13:52:48 2024 -0800
+        
+            a new file named index.html has been created in myrepository.
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git merge master
+        Already up to date.
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git add index.html
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git status
+        On branch master
+        Your branch is up to date with 'delapart/master'.
+        
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                new file:   code.js
+                modified:   index.html
+                new file:   style.css
+        
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git commit -m "a new line add to index.html
+        > "
+        [master 9b6c010] a new line add to index.html
+         3 files changed, 2 insertions(+), 1 deletion(-)
+         create mode 100644 code.js
+         create mode 100644 style.css
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $ git push -u delapart master
+        Enumerating objects: 6, done.
+        Counting objects: 100% (6/6), done.
+        Delta compression using up to 2 threads
+        Compressing objects: 100% (3/3), done.
+        Writing objects: 100% (4/4), 377 bytes | 188.00 KiB/s, done.
+        Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+        remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+        To https://github.com/delapart72/myrepository.git
+           220ebbe..9b6c010  master -> master
+        branch 'master' set up to track 'delapart/master'.
+        
+        User001@LAPTOP-HUVE3SVK MINGW64 /myrepository (master)
+        $
+        </p>
 </body>
 <style>body{background: yellow};</style>
 </html>
